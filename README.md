@@ -1,4 +1,4 @@
-# Nic.io Domain Scanner
+# .io Domain Scanner
 
 <img width="594" alt="screen shot 2016-07-21 at 23 37 12" src="https://cloud.githubusercontent.com/assets/818400/17039745/2361715e-4f9c-11e6-8757-cb59b07a7984.png">
 

@@ -28,12 +28,11 @@ lr.on('error', function (err) {
 lr.on('line', function (word) {
     lr.pause()
     words += 1
-	var word = word
 
     setTimeout(function () {
     	request({url: config.url, method: 'GET', headers: headers, qs: {'query': word + config.extension}, timeout: config.requestTimeout}, function(error, response, html){
     		if(!error && response.statusCode == 200){
-    			var $ = cheerio.load(html)
+    			let $ = cheerio.load(html)
     			logger.info(`====  ${words}) Checking domain: ${word}${config.extension} ====`);
 
     	        $("#bodyfill b").filter(function() {

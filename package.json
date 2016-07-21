@@ -1,0 +1,55 @@
+{
+  "name": "nic.io-scanner",
+  "version": "1.0.0",
+  "description": ".io domain scanner",
+  "scripts": {
+    "start": "node io-scanner.js | bunyan -o short",
+    "test": "./node_modules/mocha/bin/mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/j8/nic.io-scanner"
+  },
+  "dependencies": {
+    "bunyan": "^1.8.1",
+    "cheerio": "^0.20.0",
+    "line-by-line": "^0.1.5",
+    "rc": "^1.1.6",
+    "request": "^2.73.0"
+  },
+  "keywords": [
+    "nic.io",
+    ".io",
+    "domain",
+    "scanner",
+    "domain",
+    "scanner",
+    "io",
+    "domains"
+  ],
+  "author": "j8",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/j8/nic.io-scanner/issues"
+  },
+  "homepage": "https://github.com/j8/nic.io-scanner#readme",
+  "jshintConfig": {
+    "strict": false,
+    "asi": true,
+    "lastsemic": false,
+    "esversion": 6,
+    "node": true,
+    "sub": true,
+    "globals": {
+      "describe": false,
+      "it": false,
+      "before": false,
+      "beforeEach": false,
+      "after": false,
+      "afterEach": false
+    }
+  },
+  "devDependencies": {
+    "cheerio": "^0.20.0"
+  }
+}

@@ -1,0 +1,8 @@
+{	
+	"url": "http://nic.io/cgi-bin/whois",
+	"extension": ".io",
+	"wordsFile": "list_of_words.txt",
+	"minimumSeconds": 6000,
+	"maximumSeconds": 10000,
+	"requestTimeout": 10000
+}

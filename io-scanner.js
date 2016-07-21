@@ -35,18 +35,20 @@ lr.on('line', function (word) {
     			let $ = cheerio.load(html)
     			logger.info(`====  ${words}) Checking domain: ${word}${config.extension} ====`);
 
-    	        $("#bodyfill b").filter(function() {
-    	        	 if( $(this).text().indexOf('pendingDelete') >= 0) {
-    		        	logger.warn(`==== Domain ${word}${config.extension} pending delete ${$(this).text()} ====`);
+				$("#bodyfill b").filter(function() {
+				 if( $(this).text().indexOf('pendingDelete') >= 0) {
 
-    	        	 	lr.resume()
-    	        	 } else if ( $(this).text().indexOf('This Domain is') >= 0) {
-    	        	 	logger.warn(`==== BAZINGA! Domain ${word}${config.extension} is free ====`);
-    	        	 	lr.resume()
-    	        	 } else {
-    	        	 	lr.resume()
-    	        	 }
-    	        })
+					logger.warn(`==== Domain ${word}${config.extension} pending delete ${$(this).text()} ====`);
+				 	lr.resume()
+				 } else if ( $(this).text().indexOf('This Domain is') >= 0) {
+
+				 	logger.warn(`==== BAZINGA! Domain ${word}${config.extension} is free ====`);
+				 	lr.resume()
+				 } else {
+				 	
+				 	lr.resume()
+				 }
+				})
     		} else {
     			logger.error(`==== Error or timeout ====`);
     			lr.resume()

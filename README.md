@@ -6,6 +6,10 @@
 
 I was looking recently for free .io domains for some of my OSS projects and than I thought it will be nice to have spme commandline utility to scan for domain names by list of brainstormed words
 
+# Install
+
+``npm install``
+
 # How it works?
 
 Just put your ideas for domains in "list_of_words.txt" and run ```npm start```
